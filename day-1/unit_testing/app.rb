@@ -13,6 +13,8 @@ p the_calculator.add("3") == 3
 
 p the_calculator.add("") == 0
 
+p the_calculator.add == 0
+
 
 
 
