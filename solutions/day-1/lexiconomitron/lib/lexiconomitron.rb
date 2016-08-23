@@ -3,6 +3,7 @@
 class Lexiconomitron
 
   def eat_t(text)
+    # text.gsub(/[tT]/, "")
     text.tr("tT", "")
   end
 
