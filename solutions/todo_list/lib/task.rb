@@ -32,6 +32,6 @@ class Task
 
     def update_content!(new_content)
       @content = new_content
-      @update_at = Time.now
+      @updated_at = Time.now
     end
 end
