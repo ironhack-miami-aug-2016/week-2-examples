@@ -1,0 +1,15 @@
+<h1> Paidwell </h1>
+
+<p> Your destination for female overpriced leggings. </p>
+
+
+<ul>
+  <% @cart.each do |the_item| %>
+    <li>
+      <h3> <%= the_item[:length] %> </h3>
+
+      <p> Color: <%= the_item[:color] %> </p>
+      <p> Quantity: <%= the_item[:quantity] %> </p>
+    </li>
+  <% end %>
+</ul>
