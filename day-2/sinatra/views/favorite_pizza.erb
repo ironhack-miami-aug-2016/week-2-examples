@@ -1,0 +1,21 @@
+<!-- views/favorite_pizza.erb -->
+
+<!-- Refers to views/home.erb -->
+<link rel="stylesheet" href="/styles.css">
+
+
+<h1> Our Favorite Pizza </h1>
+
+<p> Pound for pound, the best pizza you can make. </p>
+
+<img src="/pizza.gif">
+
+<ul>
+
+  <% @pizza_ingredients.each do |the_ingredient| %>
+    <li>
+      Ingredient: <%= the_ingredient %>
+    </li>
+  <% end %>
+
+</ul>

@@ -27,3 +27,14 @@ get "/about" do
   #      |
   erb :about
 end
+
+
+get "/pizza" do
+  @pizza_ingredients = [
+    "Cheese", "Dough", "Tomato Sauce",
+    "Mushrooms", "Pepperonni", "Pineapple"
+  ]
+
+  erb :favorite_pizza
+end
+
