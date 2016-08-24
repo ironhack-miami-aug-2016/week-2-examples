@@ -8,6 +8,7 @@ get "/ascii/:user_word/?:optional_font?/?:easter_egg?" do
   easter_egg = params[:easter_egg]
 
   # If the easter egg is found...
+    # /ascii/dinosaur/special/secret
 
   if user_word == "dinosaur" &&
      font_string == "special" &&
