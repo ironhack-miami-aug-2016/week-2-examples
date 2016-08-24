@@ -1,0 +1,15 @@
+<!-- views/home.erb -->
+
+<h1> hello <h1>
+
+<ul>
+  <li> <a href="/company"> See company page </a> </li>
+  <li> <a href="/about"> About Us </a> </li>
+  <li> <a href="/pizza"> Pizza </a> </li>
+  <li> <a href="/leadership"> Leadership </a> </li>
+</ul>
+
+<small>
+  Currently in the session:
+  <b> <%= session[:saved_value] %> </b>
+</small>
