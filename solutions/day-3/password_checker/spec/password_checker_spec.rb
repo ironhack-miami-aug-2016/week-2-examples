@@ -32,6 +32,11 @@ RSpec.describe PasswordChecker do
       expect( the_checker.check_password("nizar@example.com", "hello^*{}<ISITME") ).to eq(false)
     end
 
+    it "returns false for passwords without special characters" do
+      expect( the_checker.check_password("nizar@example.com", "aaaaaaBBBB57688") ).to eq(false)
+      expect( the_checker.check_password("nizar@example.com", "hello000000ISITME") ).to eq(false)
+    end
+
     it "returns false for passwords that contain the email name" do
       expect( the_checker.check_password("nizar@example.com", "nizar#1BEST$$") ).to eq(false)
       expect( the_checker.check_password("nizar@example.com", "HELLO^*34<nizar") ).to eq(false)

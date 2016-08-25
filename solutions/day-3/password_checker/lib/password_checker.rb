@@ -7,6 +7,7 @@ class PasswordChecker
        contains_uppercase?(password) &&
        contains_lowercase?(password) &&
        contains_numbers?(password) &&
+       contains_symbols?(password) &&
        no_name?(email, password) &&
        no_domain?(email, password)
       true
@@ -44,6 +45,14 @@ class PasswordChecker
 
     # A different approach:
     # (password =~ /[0-9]/) != nil
+  end
+
+  def contains_symbols?(password)
+    password.match(/[^a-zA-Z0-9]/) != nil
+
+    # A different approaches:
+    # (password =~ /[^a-zA-Z0-9]/) != nil
+    # password.match(/\W/) != nil
   end
 
   def no_name?(email, password)
