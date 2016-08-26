@@ -1,0 +1,11 @@
+<h1> Movie Trivia </h1>
+
+<p>
+  Showing
+  <strong> <%= @movies.length %> </strong>
+  results.
+</p>
+
+<% @movies.each do |the_movie| %>
+  <img src="<%= the_movie.poster %>">
+<% end %>
